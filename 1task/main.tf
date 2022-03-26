@@ -18,27 +18,6 @@ provider "aws" {
   }
 }
 
-# resource "aws_instance" "tf_24" {
-#   ami = data.aws_ami.amazon_linux.id
-#   instance_type = "t2.micro"
-
-#   tags = {
-#     Name = "HelloWorld"
-#   }
-#   volume_tags = {
-#     "Owner" = "terraform"
-#   }
-# }
-# data "aws_ami" "amazon_linux" {
-#   most_recent = true
-
-#   filter {
-#     name = "name"
-#     values = ["amzn2-ami-kernel-5.10-hvm-*-x86_64-gp2"]
-#   }
-#   owners = ["amazon"]
-# }
-
 data "aws_vpcs" "my_vpcs" {}
 
 output "aws_vpcs" {
